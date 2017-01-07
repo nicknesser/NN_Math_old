@@ -16,8 +16,8 @@ class Powers {
 		Scanner power = new Scanner(System.in);
 		
 		System.out.println("What is the base of your expression?: ");
-		int base = power.nextInt();
-		int steady = base;
+		float base = power.nextFloat();
+		float steady = base;
 		/* created steady to hold an unchanging value of base.
 		since steady is outside of the scope of the for loop,
 		it allows for a constant for base to multiply in each iteration
@@ -34,4 +34,5 @@ class Powers {
 		power.close();
 		
 	}
+
 }

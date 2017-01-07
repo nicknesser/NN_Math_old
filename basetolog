@@ -1,0 +1,33 @@
+package basetolog;
+import java.lang.Math;
+import java.util.Scanner;
+
+/*This is a simple program intended to take an input of the exponential expression
+ * x^ z = y and outputs it as the logarithmic expression 
+ * log ((subscript) x) (y) = z
+ */
+
+// import declarations and packages
+class basetolog {
+       
+	public static void main(String[] arguments) {	
+		// create Scanner to take user input
+		Scanner btl = new Scanner(System.in);
+		
+		// Variables are named after position in output
+				System.out.println("What is the base of your exponential expression? ");
+				int base = btl.nextInt();
+				
+				System.out.println("What is the power of your exponential expression?: ");
+				int power = btl.nextInt();
+				
+				System.out.println("What is the answer to the exponential expression?: ");
+				int answer = btl.nextInt();
+				
+				System.out.println("Your logarithmic expression will be: log base " + base 
+						+ " of " + answer + " equals " + power);
+				
+				btl.close();
+	}
+
+}

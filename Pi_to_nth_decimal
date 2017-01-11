@@ -3,6 +3,10 @@ import java.lang.Math;
 import java.util.Scanner;
 //import packages 
 
+/*This is a simple program that takes the input of an integer
+ * and outputs pi to the integer decimal place
+ */
+
 class Pitonthdigit {
 
 	public static void main(String[] arguments){

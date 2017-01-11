@@ -1,0 +1,38 @@
+package Fibonacci;
+import java.lang.Math;
+import java.util.Scanner;
+//import packages 
+
+/* This is a simple program that takes the user input in the form of an integer
+ * and outputs the fibonacci sequence to that integer.
+ */
+
+class Fibonacci {
+
+	public static void main(String[] arguments){
+		
+		//initialize scanner and limit input to (1 < n < 10)
+		Scanner fib = new Scanner(System.in);
+		System.out.println("What int would you like the fibonacci sequence to reach? ");
+		int n = fib.nextInt();
+		
+		// condition to ensure input is between 1 and 10
+		while(n < 0 || n > 9){
+		System.out.println("Please enter a number between 1 and 9");
+		n = fib.nextInt();
+		}
+		
+		int a = 0;
+		int b = 1;
+		int c;
+		for (int i = 2; i < n + 2 ; i++){
+			c = a + b;
+			System.out.print(c + " ");
+			a = b;
+		    b = c;
+			
+		}
+		fib.close();
+	}
+
+}

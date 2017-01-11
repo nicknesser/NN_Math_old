@@ -1,0 +1,42 @@
+package etothenthdigit;
+import java.lang.Math;
+import java.util.Scanner;
+//import packages 
+
+/*This is a simple program that takes the input of an integer
+ * and outputs e to the integer decimal place
+ */
+
+
+class etothenthdigit {
+
+	public static void main(String[] arguments){
+		//initialize scanner and limit input to (1 < n < 10)
+				Scanner eton = new Scanner(System.in);
+				System.out.println("What decimal place of e would you like?");
+				int n = eton.nextInt();
+				
+				// condition to ensure input is between 1 and 10
+				while(n < 0 || n > 9){
+				System.out.println("Please enter a number between 1 and 9");
+				n = eton.nextInt();
+				}
+				
+				// initialize variables for rounding
+				int ten = 10;
+				int steady = ten;
+					
+		    // this loop finds ten to the nth power, for rounding purposes
+				for (int i = 0; i < n -1 ; i++){
+					ten = (steady * ten);
+				}
+					
+				double a = Math.E;
+				a = Math.round(a * ten);
+				a = (a/(ten));
+				System.out.println(a);
+					
+				eton.close();
+	}
+
+}

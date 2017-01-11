@@ -1,0 +1,36 @@
+package Pitonthdigit;
+import java.lang.Math;
+import java.util.Scanner;
+//import packages 
+
+class Pitonthdigit {
+
+	public static void main(String[] arguments){
+		//initialize scanner and limit input to (1 < n < 10)
+		Scanner piton = new Scanner(System.in);
+		System.out.println("What decimal place of pi would you like?");
+		int n = piton.nextInt();
+		
+		// condition to ensure input is between 1 and 10
+		while(n < 0 || n > 9){
+		System.out.println("Please enter a number between 1 and 9");
+		n = piton.nextInt();
+		}
+		
+		// initialize variables for rounding
+		int ten = 10;
+		int steady = ten;
+			
+		 // this loop finds ten to the nth power, for rounding purposes
+		for (int i = 0; i < n -1 ; i++){
+			ten = (steady * ten);
+		}
+			
+		double a = Math.PI;
+		a = Math.round(a * ten);
+	  a = (a/(ten));
+	  System.out.println(a);
+			
+		piton.close();
+	}
+}

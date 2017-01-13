@@ -1,0 +1,43 @@
+package next_prime_number;
+import java.lang.Math;
+import java.util.Scanner;
+//import packages 
+
+/* This is a simple program that takes the user input in the form of a string
+ * and outputs the next prime number while the input remains "yes"
+ */
+class Next_Prime_Number {
+
+	public static void main(String[] arguments){
+		//initialize scanner and limit input to (0 < n < 100)
+				Scanner prime = new Scanner(System.in);
+				System.out.println("Would you like the next prime number? ");
+				String npn = prime.nextLine();
+				
+				// condition to accept "yes" or "Yes" to proceed.
+				int count = 0;
+				while(npn == "yes" || npn == "Yes"){
+					
+					//Below is relevant for you R.
+					for(int i = count; i < count + 30; i++){
+						for (int j = 1; j <= 9; j++){
+							if(i == j){
+								continue;
+							}
+							else if(i !=j && i%j == 0){
+								continue;
+							}
+							else if (i !=j && i%j != 0){
+								System.out.println(i);
+								break;
+							}
+						}
+					}
+					// No longer relevant
+					
+					System.out.println("Would you like the next prime number?" );
+					npn = prime.nextLine();
+				}
+	}
+
+}
